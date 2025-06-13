@@ -1,26 +1,26 @@
 ## 開発環境
-- このソースコードは Github のリポジトリ [Build2025-BRK231](https://github.com/MamoruKuroda/Build25-BRK231) からクローンしたもの
+- このソースコードは Github のリポジトリ [Build2025-BRK231](https://github.com/microsoft/Build25-BRK231) からクローンしたもの
 
 ## 目的
 - Microsoft Entra External ID をつかい、BtoC向けのECサイトでチャットUIを用意し、ユーザーの入力つまりプロンプトに応じて動作するエージェントを構成する。
 - エージェントは Azure AI Foundry でデプロイされた LLM のモデルのエンドポイントを利用する。
-- Microsoft Entra External ID の技術的なドキュメントは [ExtID Overview](https://learn.microsoft.com/ja-jp/entra/external-id/external-identities-overview)を参照すること。
+- Microsoft Entra External ID の技術的なドキュメントは [MSLearn - Microsoft Entra External ID Overview](https://learn.microsoft.com/ja-jp/entra/external-id/external-identities-overview)を参照すること。
 
 ## 環境情報
 ### Azure AI Foundry
-- Endpoint: "https://<deploymentname>.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview"
-- Api-Key: "<Key Value>"
-- Model: "<model name>>"
+- Endpoint: "https://`<deploymentname>`.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview"
+- Api-Key: "`<Key Value>`"
+- Model: "`<model name>`"
 - Azure AI Foundry の設定は src\AgentAPI\OpenAIOptions.cs ハードコーディングするが必要に応じて Azure Key Vault や App Service の環境変数を利用すること
 
 ### Microsoft Entra External ID Info
-- Tenant: <Entra External ID のサブドメイン名>.ciamlogin.com
-- AgentAPI Client ID: <Agent API の Client ID>
-- AgentAPI Secret: <Agent API の Secret>
-- WoodgroveGroceries Client ID: <WoodgroveGroceries の Client ID>
-- WoodgroveGroceries Secret: <WoodgroveGroceries の Secret>
-- WebAPI Client ID: <WebAPI の Client ID>
-- WebAPI Secret: <WebAPI の Secret>
+- Tenant: `<Entra External ID のサブドメイン名>`.ciamlogin.com
+- AgentAPI Client ID: `<Agent API の Client ID>`
+- AgentAPI Secret: `<Agent API の Secret>`
+- WoodgroveGroceries Client ID: `<WoodgroveGroceries の Client ID>`
+- WoodgroveGroceries Secret: `<WoodgroveGroceries の Secret>`
+- WebAPI Client ID: `<WebAPI の Client ID>`
+- WebAPI Secret: `<WebAPI の Secret>`
 
 ### Configuration Steps
 1. create external tenant
